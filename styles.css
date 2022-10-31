@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
@@ -12,6 +13,7 @@ body {
     background-color: #fff;
     /* background-color: #464646; */
     overflow: hidden;
+    overflow-y: scroll;
 }
 
 h1 {
@@ -32,6 +34,7 @@ h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    /* margin-bottom: 100px; */
 }
 
 .container-level{
