@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 body {
@@ -14,6 +13,7 @@ body {
     /* background-color: #464646; */
     overflow: hidden;
     overflow-y: scroll;
+    height: 100vw;
 }
 
 h1 {
