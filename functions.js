@@ -27,15 +27,17 @@ const orden = [
     },
 ];
 
+
+
 //Variable para medir el progreso
-let nivel_actual = 0;
+let nivel_actual = 1;
 let progreso = 0;
 let pasos = Object.keys(ayuda_nivel_2).length - 2;
 
 //Obtener datos de la red dada
-const id_red = document.getElementById("id_red").textContent;
-const slash = id_red.substring(id_red.length - 2);
-const hosts = 2 ** (32 - slash);
+let id_red = document.getElementById("id_red").textContent;
+let slash = id_red.substring(id_red.length - 2);
+let hosts = 2 ** (32 - slash);
 let salto = 2 ** (32 - slash) - 1;
 
 while (salto > 255) {
@@ -251,7 +253,6 @@ function update(currentActive) {
 
         if (currentActive == pasos)  {
             document.getElementById('nivel_completado').classList.remove('hide');
-            document.getElementById('body').classList.add('oscurecer');
             document.getElementById("options").classList.add('hide');
             document.getElementById("drop-targets").classList.add('hide');
             document.getElementById("container_2").classList.add('hide');
@@ -263,4 +264,19 @@ function update(currentActive) {
                 ""
             );
         }
+}
+
+
+function siguienteNivel(){
+    $('#main_container').remove();
+    document.getElementById('body').classList.add('oscurecer');
+
+    // setTimeout( () => {
+    //     ++nivel_actual;
+    //     progreso = 0;
+    //     if(nivel_actual == 1){pasos = Object.keys(ayuda_nivel_1).length - 2;}
+    //     else if(nivel_actual == 2){pasos = Object.keys(ayuda_nivel_2).length - 2;}
+        
+    // }, 2000);
+
 }

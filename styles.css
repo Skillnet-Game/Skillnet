@@ -312,9 +312,6 @@ h1 {
     height: 3.5rem;
     width: 9.25rem;
     position: inherit;
-    /* text-align: center;
-    margin-top: 23.7rem;
-    z-index: 20; */
 
     border-radius: 3%;
     background: linear-gradient(71deg,#5800ff 0%, #1bbcc0 100%);
