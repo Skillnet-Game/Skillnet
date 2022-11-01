@@ -14,11 +14,11 @@ body {
     overflow: hidden;
     overflow-y: scroll;
     height: 100vw;
-    margin: 0px 1.25rem 0px 1.25rem;
+    
 }
 
 h1 {
-    color: #323330;
+    color: #000000;
     margin-bottom: 40px;
 }
 
@@ -27,15 +27,19 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin: 1.25rem 1.25rem 0px 1.25rem;
 }
+
+/* .oscuro{
+    z-index: 10;
+    display: none;
+} */
 
 .container-2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* margin-bottom: 100px; */
 }
 
 .container-level{
@@ -105,8 +109,8 @@ h1 {
 
 
 .box {
-    height: 100px;
-    width: 200px;
+    height: 6.25rem;
+    width: 12.5rem;
     margin: 10px;
     background: #e0e0e0;
 
@@ -115,6 +119,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 0;
 }
 
 .box:hover {
@@ -211,6 +216,7 @@ h1 {
     height: 4px;
     width: 100%;
     z-index: -1;
+    display: inherit;
 }
 
 .progress-container {
@@ -220,6 +226,7 @@ h1 {
     margin-bottom: 30px;
     max-width: 100%;
     width: 54rem;
+    display: inherit;
 }
 
 .progress {
@@ -232,6 +239,7 @@ h1 {
     width: 0%;
     z-index: -1;
     transition: 0.4s ease;
+    display: inherit;
 }
 
 .circle {
@@ -261,6 +269,7 @@ h1 {
     padding: 8px 30px;
     margin: 5px;
     font-size: 14px;
+    display: inherit;
 }
 
 .btn:active {
@@ -283,7 +292,7 @@ h1 {
     position: absolute;
     text-align: center;
     margin-top: 23.7rem;
-    z-index: 1;
+    z-index: 20;
 
     border-radius: 3%;
     background: linear-gradient(71deg,#5800ff 0%, #1bbcc0 100%);
@@ -295,6 +304,68 @@ h1 {
     font-family: 'Press Start 2P', cursive;
     line-height: 2rem;
     animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.boton-siguiente-nivel{
+    top: 16.25rem;
+    left: 9rem;
+    height: 3.5rem;
+    width: 9.25rem;
+    position: inherit;
+    /* text-align: center;
+    margin-top: 23.7rem;
+    z-index: 20; */
+
+    border-radius: 3%;
+    background: linear-gradient(71deg,#5800ff 0%, #1bbcc0 100%);
+    font-size: 0.8rem;
+    text-align: center;
+    color: #e0e0e0;
+    text-shadow: 4px 4px 4px rgba(0,0,0,0.61);
+    box-shadow: 4px 4px 30px 0px rgba(0,0,0,0.61);
+    font-family: 'Press Start 2P', cursive;
+    line-height: 2rem;
+}
+
+
+
+.boton-siguiente-nivel:hover {
+	animation: heartbeat 1.5s ease-in-out 1 both;
+}
+
+@keyframes heartbeat {
+    from {
+        transform: scale(1);
+        transform-origin: center center;
+        animation-timing-function: ease-out;
+    }
+    10% {
+        transform: scale(0.91);
+        animation-timing-function: ease-in;
+    }
+    17% {
+        transform: scale(0.98);
+        animation-timing-function: ease-out;
+    }
+    33% {
+        transform: scale(0.87);
+        animation-timing-function: ease-in;
+    }
+    45% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
+}
+
+
+.boton-siguiente-nivel h4{
+    margin-top: 0.7rem;
+}
+
+.oscurecer{
+    transition: 2s;
+    background: #000000;
+    z-index: 10;
 }
 
 @keyframes text-focus-in {

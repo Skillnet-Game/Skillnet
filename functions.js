@@ -172,12 +172,7 @@ function drop(e) {
         const respuestaCorrecta = respuesta.getAttribute("name");
 
         if (respuestaCorrecta == opcion_seleccionada) {
-            alerta(
-                "Respuesta correcta!",
-                "¡Sigue así, vas muy bien!",
-                "success",
-                ""
-            );
+            //alerta en update()
             deleteBox(e);
             evaluarSiguiente(respuestaCorrecta);
             update(++progreso);
@@ -256,5 +251,16 @@ function update(currentActive) {
 
         if (currentActive == pasos)  {
             document.getElementById('nivel_completado').classList.remove('hide');
+            document.getElementById('body').classList.add('oscurecer');
+            document.getElementById("options").classList.add('hide');
+            document.getElementById("drop-targets").classList.add('hide');
+            document.getElementById("container_2").classList.add('hide');
+        }else{
+            alerta(
+                "Respuesta correcta!",
+                "¡Sigue así, vas muy bien!",
+                "success",
+                ""
+            );
         }
 }

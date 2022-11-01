@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="sweetalert2/sweetalert2.min.css">
 </head>
 
-<body>
+<body id="body">
     
-    <div class="container">
+    <div class="container" id="main_container">
 
         <div class="container-level">
             <div class="level">
@@ -30,13 +30,14 @@
             </div>
         </div>
         
-        <div class="drop-targets">
+        <div class="drop-targets" id="drop-targets">
             <div class="box" id="id_red">200.200.200.0/30</div>
             <div class="box" id="respuesta" name="salto">Salto</div>
         </div>
 
         <h4 id="instruccion">Selecciona Salto de red y arrastralo al recuadro de arriba</h4>
-        <div class="options">   
+
+        <div class="options" id="options">   
             <div class="box" id="id_box_1">
                 <div class="item" id="item_1" name="primera" draggable="true">
                     200.200.200.1
@@ -82,12 +83,16 @@
                 <h1>¡Felicidades!</h1>
                 <h2>Nivel 4 completado</h2>
                 <h3>Nuevos conocimientos adquiridos!</h3>
+
+                <div class="boton-siguiente-nivel" id="siguiente_nivel">
+                    <h4>Siguiente</h4>
+                </div>
         </div>
     
     </div>
 
-    <div class="container-2">
-        <div class="progress-container"></div>
+    <div class="container-2" id="container_2">
+        <div class="progress-container" id="progress_container"></div>
     </div>
     
 
